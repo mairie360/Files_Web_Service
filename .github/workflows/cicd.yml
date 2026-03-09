@@ -1,4 +1,4 @@
-name: Project Web Service CICD
+name: Files Web Service CICD
 
 on:
   push:
