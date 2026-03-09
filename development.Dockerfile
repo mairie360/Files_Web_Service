@@ -7,7 +7,7 @@ RUN apt update && apt install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
-WORKDIR /usr/src/files
+WORKDIR /usr/src/projects
 
 # Copy package files separately for better caching
 COPY package.json package-lock.json ./
@@ -19,11 +19,11 @@ RUN npm ci
 COPY . .
 
 # Create non-root user
-RUN useradd --system --home /usr/src/files --shell /usr/sbin/nologin files
+RUN useradd --system --home /usr/src/projects --shell /usr/sbin/nologin projects
 
 # Set permissions
-RUN chown -R files:files /usr/src/files
-USER files
+RUN chown -R projects:projects /usr/src/projects
+USER projects
 
 # Set environment variables
 ENV NODE_ENV=production
