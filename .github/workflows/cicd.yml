@@ -16,4 +16,5 @@ jobs:
     with:
       package_name: "files-front"
       node_version: 23
+      cicd_version: "v1.13.2"
     secrets: inherit
