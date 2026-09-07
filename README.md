@@ -1,26 +1,26 @@
-## Contrats de données
+# Files_Web_Service
 
-Contrat des routes et données, synchronisation BFF/web et limites de disponibilité : [BFF.md](BFF.md).
+Provide access to the document library, uploads and downloads. The interface uses capabilities returned by BFF Files and confirms mutations through a server reload.
 
-[BFF.md](BFF.md) décrit les routes et données nécessaires au front ; [BACKEND.md](BACKEND.md) liste les tables et routes backend correspondantes. Les contrats communs sont harmonisés entre les dix Web Services et distinguent l'existant des propositions.
+Donner accès à la bibliothèque documentaire, aux dépôts et aux téléchargements. L’interface applique les capacités renvoyées par BFF Files et confirme les mutations par un rechargement serveur.
 
-# Files
+## Documentation
 
-The **Files** module of the project — responsible for managing the files of the Mairie 360 application.
+| Language / Langue | Module | Technical / Technique |
+| --- | --- | --- |
+| English | [Module overview](docs/en/module.md) | [Technical documentation](docs/en/technical.md) |
+| Français | [Présentation du module](docs/fr/module.md) | [Documentation technique](docs/fr/technical.md) |
 
-## 🚀 Getting Started
+The guides describe the implemented module, its current limitations, local setup, routes, data, verification and CI/CD.
 
-This project is fully containerized for development. You’ll only need **Docker** and **Docker Compose** installed.
+Les guides décrivent le module implémenté, ses limites actuelles, le démarrage local, les routes, les données, les vérifications et la CI/CD.
 
-### 🐳 Run in Development Mode (with Hot Reload)
+## Contracts and background / Contrats et compléments
 
-1. Make sure Docker and Docker Compose are installed.
-2. Start the development environment:
+- [BFF.md](BFF.md)
+- [BACKEND.md](BACKEND.md)
+- [contracts/openapi.json](contracts/openapi.json)
 
-```bash
-docker compose up --build --watch
-```
+`BACKEND.md`, when present, includes proposed backend requirements; use the guides and versioned OpenAPI contract to identify current behavior.
 
-1. Open your browser at [http://development.mairie360.fr](http://development.mairie360.fr) to access the application.
-
-Changes to your code will automatically trigger a refresh or the rebuild of the affected services.
+`BACKEND.md`, lorsqu’il est présent, contient des besoins backend proposés; consulter les guides et le contrat OpenAPI versionné pour identifier le comportement actuel.
